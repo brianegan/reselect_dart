@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0
+
+- No longer export the memoizing functions
+- Use community `memoize` package instead
+
 ## 0.1.1
 
 - Fix link to repo in pubspec

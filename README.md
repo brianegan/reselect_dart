@@ -160,7 +160,7 @@ So that's about it. That's why you'd use this library and the story of how you c
 
 ### Changing the memoization
 
-The default memoize function will use the `==` method to determine whether or not your input values have changed. Most of the time, properly implementing `==` on your classes is the way to go, but if you need to change how it works, you can supply your own memoize function.
+The default memoize functions come from the [memoize package](https://pub.dartlang.org/packages/memoize). They use the `==` method of your arguments to determine whether or not your input values have changed. Most of the time, properly implementing `==` on your classes is the way to go, but if you need to change how it works, you can supply your own memoize function.
 
 The following example will use it's own custom memoize function. A memoize function takes in a function and returns a function of the same signature. It is responsible for handling how it caches the resulting values.
 
