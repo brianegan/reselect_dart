@@ -3,7 +3,7 @@
 
 A Selector library for Dart, based on the original [Reselect JavaScript library](https://github.com/reactjs/reselect#example).
 
-  * Selectors are functions that derives data from a single input, such as a the State of a Redux Store.
+  * Selectors are functions that derive data from a single input, such as a the State of a Redux Store.
   * Selectors can expose a single point of entry to the data in your [Redux](https://pub.dartlang.org/packages/redux) Store
   * Selectors can compute derived data, allowing [Redux](https://pub.dartlang.org/packages/redux) to store the minimal possible state.
   * Selectors are efficient. Derived data is not recomputed unless one of its arguments change.

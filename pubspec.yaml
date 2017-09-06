@@ -1,7 +1,7 @@
 name: reselect
 description: Efficiently derive data from your Redux Store
-version: 0.1.0
-homepage: https://gitlab.com/brianegan/reselect
+version: 0.1.1
+homepage: https://gitlab.com/brianegan/reselect_dart
 author: Brian Egan <brian@brianegan.com>
 
 environment:
