@@ -4,11 +4,11 @@ Contributions are very welcome in many forms :)
 
 ## Issues
 
-If you find a problem with this library, please [file an issue on Gitlab](https://gitlab.com/brianegan/reselect_dart/issues).
+If you find a problem with this library, please [file an issue on Github](https://github.com/brianegan/reselect_dart/issues).
 
 ## Merge Requests
 
-If you would like to fix a bug or make an improvement, please [file a merge request](https://gitlab.com/brianegan/reselect_dart/merge_requests) explaining your changes!
+If you would like to fix a bug or make an improvement, please [file a pull request](https://github.com/brianegan/reselect_dart/pulls) explaining your changes!
 
 For larger changes, such as a breaking API change, please submit an Issue or 
 "Work In Progress" Merge request that gives an overview of the changes you'd

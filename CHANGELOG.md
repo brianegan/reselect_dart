@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Move to github
+
 ## 0.2.0
 
 - No longer export the memoizing functions
