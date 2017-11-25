@@ -1,5 +1,5 @@
 # Reselect for Dart
-[![build status](https://gitlab.com/brianegan/reselect_dart/badges/master/build.svg)](https://gitlab.com/brianegan/reselect_dart/commits/master)  [![coverage report](https://gitlab.com/brianegan/reselect_dart/badges/master/coverage.svg)](https://brianegan.gitlab.io/reselect_dart/coverage/)
+[![Build Status](https://travis-ci.org/brianegan/reselect_dart.svg?branch=master)](https://travis-ci.org/brianegan/reselect_dart) [![codecov](https://codecov.io/gh/brianegan/reselect_dart/branch/master/graph/badge.svg)](https://codecov.io/gh/brianegan/redux_dev_tools)
 
 A Selector library for Dart, based on the original [Reselect JavaScript library](https://github.com/reactjs/reselect#example).
 

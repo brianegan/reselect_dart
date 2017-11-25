@@ -128,7 +128,7 @@ void main() {
         final stateSelector = (Bottle state) => state;
         final converter = new TestConverter3();
         final selector =
-        createSelector3<Bottle, Bottle, Bottle, Bottle, String>(
+            createSelector3<Bottle, Bottle, Bottle, Bottle, String>(
           stateSelector,
           stateSelector,
           stateSelector,
@@ -182,7 +182,7 @@ void main() {
         final stateSelector = (Bottle state) => state;
         final converter = new TestConverter4();
         final selector =
-        createSelector4<Bottle, Bottle, Bottle, Bottle, Bottle, String>(
+            createSelector4<Bottle, Bottle, Bottle, Bottle, Bottle, String>(
           stateSelector,
           stateSelector,
           stateSelector,
@@ -568,8 +568,8 @@ void main() {
       test('accepts an alternate memoizer that can behave differently', () {
         final stateSelector = (Bottle state) => state;
         final converter = new TestConverter10();
-        final selector = createSelector10<Bottle, Bottle, Bottle, Bottle, Bottle,
-            Bottle, Bottle, Bottle, Bottle, Bottle, Bottle, String>(
+        final selector = createSelector10<Bottle, Bottle, Bottle, Bottle,
+            Bottle, Bottle, Bottle, Bottle, Bottle, Bottle, Bottle, String>(
           stateSelector,
           stateSelector,
           stateSelector,
@@ -649,12 +649,12 @@ class TestConverter5 {
   int recomputations = 0;
 
   String call(
-      Bottle b1,
-      Bottle b2,
-      Bottle b3,
-      Bottle b4,
-      Bottle b5,
-      ) {
+    Bottle b1,
+    Bottle b2,
+    Bottle b3,
+    Bottle b4,
+    Bottle b5,
+  ) {
     recomputations++;
 
     return (b1.message + b2.message + b3.message + b4.message + b5.message);
@@ -665,13 +665,13 @@ class TestConverter6 {
   int recomputations = 0;
 
   String call(
-      Bottle b1,
-      Bottle b2,
-      Bottle b3,
-      Bottle b4,
-      Bottle b5,
-      Bottle b6,
-      ) {
+    Bottle b1,
+    Bottle b2,
+    Bottle b3,
+    Bottle b4,
+    Bottle b5,
+    Bottle b6,
+  ) {
     recomputations++;
 
     return (b1.message +
@@ -687,14 +687,14 @@ class TestConverter7 {
   int recomputations = 0;
 
   String call(
-      Bottle b1,
-      Bottle b2,
-      Bottle b3,
-      Bottle b4,
-      Bottle b5,
-      Bottle b6,
-      Bottle b7,
-      ) {
+    Bottle b1,
+    Bottle b2,
+    Bottle b3,
+    Bottle b4,
+    Bottle b5,
+    Bottle b6,
+    Bottle b7,
+  ) {
     recomputations++;
 
     return (b1.message +
@@ -711,15 +711,15 @@ class TestConverter8 {
   int recomputations = 0;
 
   String call(
-      Bottle b1,
-      Bottle b2,
-      Bottle b3,
-      Bottle b4,
-      Bottle b5,
-      Bottle b6,
-      Bottle b7,
-      Bottle b8,
-      ) {
+    Bottle b1,
+    Bottle b2,
+    Bottle b3,
+    Bottle b4,
+    Bottle b5,
+    Bottle b6,
+    Bottle b7,
+    Bottle b8,
+  ) {
     recomputations++;
 
     return (b1.message +
@@ -737,16 +737,16 @@ class TestConverter9 {
   int recomputations = 0;
 
   String call(
-      Bottle b1,
-      Bottle b2,
-      Bottle b3,
-      Bottle b4,
-      Bottle b5,
-      Bottle b6,
-      Bottle b7,
-      Bottle b8,
-      Bottle b9,
-      ) {
+    Bottle b1,
+    Bottle b2,
+    Bottle b3,
+    Bottle b4,
+    Bottle b5,
+    Bottle b6,
+    Bottle b7,
+    Bottle b8,
+    Bottle b9,
+  ) {
     recomputations++;
 
     return (b1.message +
@@ -765,17 +765,17 @@ class TestConverter10 {
   int recomputations = 0;
 
   String call(
-      Bottle b1,
-      Bottle b2,
-      Bottle b3,
-      Bottle b4,
-      Bottle b5,
-      Bottle b6,
-      Bottle b7,
-      Bottle b8,
-      Bottle b9,
-      Bottle b10,
-      ) {
+    Bottle b1,
+    Bottle b2,
+    Bottle b3,
+    Bottle b4,
+    Bottle b5,
+    Bottle b6,
+    Bottle b7,
+    Bottle b8,
+    Bottle b9,
+    Bottle b10,
+  ) {
     recomputations++;
 
     return (b1.message +
@@ -799,9 +799,9 @@ class Bottle {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-          other is Bottle &&
-              runtimeType == other.runtimeType &&
-              message == other.message;
+      other is Bottle &&
+          runtimeType == other.runtimeType &&
+          message == other.message;
 
   @override
   int get hashCode => message.hashCode;

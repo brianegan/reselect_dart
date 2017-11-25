@@ -228,10 +228,10 @@ typedef T Selector<S, T>(S state);
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector1<S, R1, T>(
-    Selector<S, R1> selector,
-    Func1<R1, T> combiner, {
-      Func1<Func1<R1, T>, Func1<R1, T>> memoize = memo1,
-    }) {
+  Selector<S, R1> selector,
+  Func1<R1, T> combiner, {
+  Func1<Func1<R1, T>, Func1<R1, T>> memoize = memo1,
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
@@ -245,11 +245,12 @@ Selector<S, T> createSelector1<S, R1, T>(
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector2<S, R1, R2, T>(
-    Selector<S, R1> selector1,
-    Selector<S, R2> selector2,
-    Func2<R1, R2, T> combiner, {
-      Func1<Func2<R1, R2, T>, Func2<R1, R2, T>> memoize = memo2,
-    }) {
+  Selector<S, R1> selector1,
+  Selector<S, R2> selector2,
+  Func2<R1, R2, T> combiner, {
+//    List<T> Function(T) memoize(T fn(R1, R2)) = memo2,
+  Func1<Func2<R1, R2, T>, Func2<R1, R2, T>> memoize = memo2,
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
@@ -263,12 +264,12 @@ Selector<S, T> createSelector2<S, R1, R2, T>(
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector3<S, R1, R2, R3, T>(
-    Selector<S, R1> selector1,
-    Selector<S, R2> selector2,
-    Selector<S, R3> selector3,
-    Func3<R1, R2, R3, T> combiner, {
-      Func1<Func3<R1, R2, R3, T>, Func3<R1, R2, R3, T>> memoize = memo3,
-    }) {
+  Selector<S, R1> selector1,
+  Selector<S, R2> selector2,
+  Selector<S, R3> selector3,
+  Func3<R1, R2, R3, T> combiner, {
+  Func1<Func3<R1, R2, R3, T>, Func3<R1, R2, R3, T>> memoize = memo3,
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
@@ -286,13 +287,13 @@ Selector<S, T> createSelector3<S, R1, R2, R3, T>(
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector4<S, R1, R2, R3, R4, T>(
-    Selector<S, R1> selector1,
-    Selector<S, R2> selector2,
-    Selector<S, R3> selector3,
-    Selector<S, R4> selector4,
-    Func4<R1, R2, R3, R4, T> combiner, {
-      Func1<Func4<R1, R2, R3, R4, T>, Func4<R1, R2, R3, R4, T>> memoize = memo4,
-    }) {
+  Selector<S, R1> selector1,
+  Selector<S, R2> selector2,
+  Selector<S, R3> selector3,
+  Selector<S, R4> selector4,
+  Func4<R1, R2, R3, R4, T> combiner, {
+  Func1<Func4<R1, R2, R3, R4, T>, Func4<R1, R2, R3, R4, T>> memoize = memo4,
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
@@ -311,15 +312,15 @@ Selector<S, T> createSelector4<S, R1, R2, R3, R4, T>(
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector5<S, R1, R2, R3, R4, R5, T>(
-    Selector<S, R1> selector1,
-    Selector<S, R2> selector2,
-    Selector<S, R3> selector3,
-    Selector<S, R4> selector4,
-    Selector<S, R5> selector5,
-    Func5<R1, R2, R3, R4, R5, T> combiner, {
-      Func1<Func5<R1, R2, R3, R4, R5, T>, Func5<R1, R2, R3, R4, R5, T>> memoize =
-          memo5,
-    }) {
+  Selector<S, R1> selector1,
+  Selector<S, R2> selector2,
+  Selector<S, R3> selector3,
+  Selector<S, R4> selector4,
+  Selector<S, R5> selector5,
+  Func5<R1, R2, R3, R4, R5, T> combiner, {
+  Func1<Func5<R1, R2, R3, R4, R5, T>, Func5<R1, R2, R3, R4, R5, T>> memoize =
+      memo5,
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
@@ -339,16 +340,16 @@ Selector<S, T> createSelector5<S, R1, R2, R3, R4, R5, T>(
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector6<S, R1, R2, R3, R4, R5, R6, T>(
-    Selector<S, R1> selector1,
-    Selector<S, R2> selector2,
-    Selector<S, R3> selector3,
-    Selector<S, R4> selector4,
-    Selector<S, R5> selector5,
-    Selector<S, R6> selector6,
-    Func6<R1, R2, R3, R4, R5, R6, T> combiner, {
-      Func1<Func6<R1, R2, R3, R4, R5, R6, T>, Func6<R1, R2, R3, R4, R5, R6, T>>
+  Selector<S, R1> selector1,
+  Selector<S, R2> selector2,
+  Selector<S, R3> selector3,
+  Selector<S, R4> selector4,
+  Selector<S, R5> selector5,
+  Selector<S, R6> selector6,
+  Func6<R1, R2, R3, R4, R5, R6, T> combiner, {
+  Func1<Func6<R1, R2, R3, R4, R5, R6, T>, Func6<R1, R2, R3, R4, R5, R6, T>>
       memoize = memo6,
-    }) {
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
@@ -369,18 +370,18 @@ Selector<S, T> createSelector6<S, R1, R2, R3, R4, R5, R6, T>(
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector7<S, R1, R2, R3, R4, R5, R6, R7, T>(
-    Selector<S, R1> selector1,
-    Selector<S, R2> selector2,
-    Selector<S, R3> selector3,
-    Selector<S, R4> selector4,
-    Selector<S, R5> selector5,
-    Selector<S, R6> selector6,
-    Selector<S, R7> selector7,
-    Func7<R1, R2, R3, R4, R5, R6, R7, T> combiner, {
-      Func1<Func7<R1, R2, R3, R4, R5, R6, R7, T>,
+  Selector<S, R1> selector1,
+  Selector<S, R2> selector2,
+  Selector<S, R3> selector3,
+  Selector<S, R4> selector4,
+  Selector<S, R5> selector5,
+  Selector<S, R6> selector6,
+  Selector<S, R7> selector7,
+  Func7<R1, R2, R3, R4, R5, R6, R7, T> combiner, {
+  Func1<Func7<R1, R2, R3, R4, R5, R6, R7, T>,
           Func7<R1, R2, R3, R4, R5, R6, R7, T>>
       memoize = memo7,
-    }) {
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
@@ -402,19 +403,19 @@ Selector<S, T> createSelector7<S, R1, R2, R3, R4, R5, R6, R7, T>(
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector8<S, R1, R2, R3, R4, R5, R6, R7, R8, T>(
-    Selector<S, R1> selector1,
-    Selector<S, R2> selector2,
-    Selector<S, R3> selector3,
-    Selector<S, R4> selector4,
-    Selector<S, R5> selector5,
-    Selector<S, R6> selector6,
-    Selector<S, R7> selector7,
-    Selector<S, R8> selector8,
-    Func8<R1, R2, R3, R4, R5, R6, R7, R8, T> combiner, {
-      Func1<Func8<R1, R2, R3, R4, R5, R6, R7, R8, T>,
+  Selector<S, R1> selector1,
+  Selector<S, R2> selector2,
+  Selector<S, R3> selector3,
+  Selector<S, R4> selector4,
+  Selector<S, R5> selector5,
+  Selector<S, R6> selector6,
+  Selector<S, R7> selector7,
+  Selector<S, R8> selector8,
+  Func8<R1, R2, R3, R4, R5, R6, R7, R8, T> combiner, {
+  Func1<Func8<R1, R2, R3, R4, R5, R6, R7, R8, T>,
           Func8<R1, R2, R3, R4, R5, R6, R7, R8, T>>
       memoize = memo8,
-    }) {
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
@@ -437,20 +438,20 @@ Selector<S, T> createSelector8<S, R1, R2, R3, R4, R5, R6, R7, R8, T>(
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector9<S, R1, R2, R3, R4, R5, R6, R7, R8, R9, T>(
-    Selector<S, R1> selector1,
-    Selector<S, R2> selector2,
-    Selector<S, R3> selector3,
-    Selector<S, R4> selector4,
-    Selector<S, R5> selector5,
-    Selector<S, R6> selector6,
-    Selector<S, R7> selector7,
-    Selector<S, R8> selector8,
-    Selector<S, R9> selector9,
-    Func9<R1, R2, R3, R4, R5, R6, R7, R8, R9, T> combiner, {
-      Func1<Func9<R1, R2, R3, R4, R5, R6, R7, R8, R9, T>,
+  Selector<S, R1> selector1,
+  Selector<S, R2> selector2,
+  Selector<S, R3> selector3,
+  Selector<S, R4> selector4,
+  Selector<S, R5> selector5,
+  Selector<S, R6> selector6,
+  Selector<S, R7> selector7,
+  Selector<S, R8> selector8,
+  Selector<S, R9> selector9,
+  Func9<R1, R2, R3, R4, R5, R6, R7, R8, R9, T> combiner, {
+  Func1<Func9<R1, R2, R3, R4, R5, R6, R7, R8, R9, T>,
           Func9<R1, R2, R3, R4, R5, R6, R7, R8, R9, T>>
       memoize = memo9,
-    }) {
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
@@ -474,21 +475,21 @@ Selector<S, T> createSelector9<S, R1, R2, R3, R4, R5, R6, R7, R8, R9, T>(
 ///
 /// A complete example can be seen as part of the [Selector] documentation.
 Selector<S, T> createSelector10<S, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, T>(
-    Selector<S, R1> selector1,
-    Selector<S, R2> selector2,
-    Selector<S, R3> selector3,
-    Selector<S, R4> selector4,
-    Selector<S, R5> selector5,
-    Selector<S, R6> selector6,
-    Selector<S, R7> selector7,
-    Selector<S, R8> selector8,
-    Selector<S, R9> selector9,
-    Selector<S, R10> selector10,
-    Func10<R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, T> combiner, {
-      Func1<Func10<R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, T>,
+  Selector<S, R1> selector1,
+  Selector<S, R2> selector2,
+  Selector<S, R3> selector3,
+  Selector<S, R4> selector4,
+  Selector<S, R5> selector5,
+  Selector<S, R6> selector6,
+  Selector<S, R7> selector7,
+  Selector<S, R8> selector8,
+  Selector<S, R9> selector9,
+  Selector<S, R10> selector10,
+  Func10<R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, T> combiner, {
+  Func1<Func10<R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, T>,
           Func10<R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, T>>
       memoize = memo10,
-    }) {
+}) {
   final memoized = memoize(combiner);
 
   return (S state) {
