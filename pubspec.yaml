@@ -1,15 +1,14 @@
 name: reselect
 description: Efficiently derive data from your Redux Store
-version: 0.2.1
+version: 0.3.0
 homepage: https://github.com/brianegan/reselect_dart
 author: Brian Egan <brian@brianegan.com>
 
 environment:
-  sdk: '>=1.24.1 <2.0.0'
+  sdk: '>=2.0.0-dev.28.0 <3.0.0'
 
 dependencies:
-  func: ">=1.0.0 <2.0.0"
-  memoize: ">=1.3.0 <2.0.0"
+  memoize: ">=1.4.0 <2.0.0"
 
 dev_dependencies:
-  test: ^0.12.0
+  test: ^0.12.33
