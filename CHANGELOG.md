@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+
+- Update dependencies for full Dart 2 support
+
 ## 0.3.0
 
 - Support Dart 2

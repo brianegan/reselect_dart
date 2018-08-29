@@ -12,3 +12,4 @@ coverage/
 coverage.json
 packages
 lcov.info
+.dart_tool/
