@@ -229,7 +229,7 @@ typedef Selector<S, T> = T Function(S state);
 Selector<S, T> createSelector1<S, R1, T>(
   Selector<S, R1> selector,
   T Function(R1) combiner, {
-  T Function(R1) Function(T Function(R1)) memoize,
+  T Function(R1) Function(T Function(R1))? memoize,
 }) {
   final memoized = (memoize ?? memo1)(combiner);
 
@@ -247,7 +247,7 @@ Selector<S, T> createSelector2<S, R1, R2, T>(
   Selector<S, R1> selector1,
   Selector<S, R2> selector2,
   T Function(R1, R2) combiner, {
-  T Function(R1, R2) Function(T Function(R1, R2)) memoize,
+  T Function(R1, R2) Function(T Function(R1, R2))? memoize,
 }) {
   final memoized = (memoize ?? memo2)(combiner);
 
@@ -266,7 +266,7 @@ Selector<S, T> createSelector3<S, R1, R2, R3, T>(
   Selector<S, R2> selector2,
   Selector<S, R3> selector3,
   T Function(R1, R2, R3) combiner, {
-  T Function(R1, R2, R3) Function(T Function(R1, R2, R3)) memoize,
+  T Function(R1, R2, R3) Function(T Function(R1, R2, R3))? memoize,
 }) {
   final memoized = (memoize ?? memo3)(combiner);
 
@@ -290,7 +290,7 @@ Selector<S, T> createSelector4<S, R1, R2, R3, R4, T>(
   Selector<S, R3> selector3,
   Selector<S, R4> selector4,
   T Function(R1, R2, R3, R4) combiner, {
-  T Function(R1, R2, R3, R4) Function(T Function(R1, R2, R3, R4)) memoize,
+  T Function(R1, R2, R3, R4) Function(T Function(R1, R2, R3, R4))? memoize,
 }) {
   final memoized = (memoize ?? memo4)(combiner);
 
@@ -316,7 +316,7 @@ Selector<S, T> createSelector5<S, R1, R2, R3, R4, R5, T>(
   Selector<S, R4> selector4,
   Selector<S, R5> selector5,
   T Function(R1, R2, R3, R4, R5) combiner, {
-  T Function(R1, R2, R3, R4, R5) Function(T Function(R1, R2, R3, R4, R5))
+  T Function(R1, R2, R3, R4, R5) Function(T Function(R1, R2, R3, R4, R5))?
       memoize,
 }) {
   final memoized = (memoize ?? memo5)(combiner);
@@ -346,7 +346,7 @@ Selector<S, T> createSelector6<S, R1, R2, R3, R4, R5, R6, T>(
   Selector<S, R6> selector6,
   T Function(R1, R2, R3, R4, R5, R6) combiner, {
   T Function(R1, R2, R3, R4, R5, R6) Function(
-          T Function(R1, R2, R3, R4, R5, R6))
+          T Function(R1, R2, R3, R4, R5, R6))?
       memoize,
 }) {
   final memoized = (memoize ?? memo6)(combiner);
@@ -378,7 +378,7 @@ Selector<S, T> createSelector7<S, R1, R2, R3, R4, R5, R6, R7, T>(
   Selector<S, R7> selector7,
   T Function(R1, R2, R3, R4, R5, R6, R7) combiner, {
   T Function(R1, R2, R3, R4, R5, R6, R7) Function(
-          T Function(R1, R2, R3, R4, R5, R6, R7))
+          T Function(R1, R2, R3, R4, R5, R6, R7))?
       memoize,
 }) {
   final memoized = (memoize ?? memo7)(combiner);
@@ -412,7 +412,7 @@ Selector<S, T> createSelector8<S, R1, R2, R3, R4, R5, R6, R7, R8, T>(
   Selector<S, R8> selector8,
   T Function(R1, R2, R3, R4, R5, R6, R7, R8) combiner, {
   T Function(R1, R2, R3, R4, R5, R6, R7, R8) Function(
-          T Function(R1, R2, R3, R4, R5, R6, R7, R8))
+          T Function(R1, R2, R3, R4, R5, R6, R7, R8))?
       memoize,
 }) {
   final memoized = (memoize ?? memo8)(combiner);
@@ -448,7 +448,7 @@ Selector<S, T> createSelector9<S, R1, R2, R3, R4, R5, R6, R7, R8, R9, T>(
   Selector<S, R9> selector9,
   T Function(R1, R2, R3, R4, R5, R6, R7, R8, R9) combiner, {
   T Function(R1, R2, R3, R4, R5, R6, R7, R8, R9) Function(
-          T Function(R1, R2, R3, R4, R5, R6, R7, R8, R9))
+          T Function(R1, R2, R3, R4, R5, R6, R7, R8, R9))?
       memoize,
 }) {
   final memoized = (memoize ?? memo9)(combiner);
@@ -486,7 +486,7 @@ Selector<S, T> createSelector10<S, R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, T>(
   Selector<S, R10> selector10,
   T Function(R1, R2, R3, R4, R5, R6, R7, R8, R9, R10) combiner, {
   T Function(R1, R2, R3, R4, R5, R6, R7, R8, R9, R10) Function(
-          T Function(R1, R2, R3, R4, R5, R6, R7, R8, R9, R10))
+          T Function(R1, R2, R3, R4, R5, R6, R7, R8, R9, R10))?
       memoize,
 }) {
   final memoized = (memoize ?? memo10)(combiner);
