@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0
+
+- Null Safety Support
+
 ## 0.4.0
 
 - Update dependencies for full Dart 2 support
@@ -23,6 +27,6 @@
 
 ## 0.1.0
 
-- Initial version, includes the `Selector` typedef and `createSelector1` through `createSelector10` as mechanisms to create and combine memoized selectors. 
+- Initial version, includes the `Selector` typedef and `createSelector1` through `createSelector10` as mechanisms to create and combine memoized selectors.
 - Includes docs
 - Includes tests

@@ -1,19 +1,14 @@
 name: reselect
 description: Efficiently derive data from your Redux Store
-version: 0.4.0
+version: 0.5.0
 homepage: https://github.com/brianegan/reselect_dart
 author: Brian Egan <brian@brianegan.com>
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  memoize: ">=2.0.0 <3.0.0"
-
-dependency_overrides:
-  # TODO: wait for [#13](https://github.com/wrike/memoize_dart/pull/13) to be merged
-  memoize:
-    git: https://github.com/ipcjs/memoize_dart.git
+  memoize: ">=3.0.0 <4.0.0"
 
 dev_dependencies:
-  test: ^1.3.0
+  test: ^1.16.8
