@@ -1,11 +1,11 @@
 language: dart
 sudo: false
 dart:
-- 2.0.0
+  - stable
 with_content_shell: false
 dart_task:
-- dartanalyzer: --fatal-warnings lib
-- dartfmt
+  - dartanalyzer: --fatal-warnings lib
+  - dartfmt
 script:
   - set -e
   - pub run test test/reselect_test.dart
